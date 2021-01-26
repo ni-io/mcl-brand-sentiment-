@@ -1,4 +1,4 @@
-![banner](https://github.com/nickitaliano/mcl-mh-brand-sentiment-analysis-app/banner.png)
+![alt text](https://github.com/nickitaliano/mcl-mh-brand-sentiment-analysis-app/blob/master/banner.png?raw=true)
 
 # mh-mcl-brand-sentiment-app🎹
 "Apitzer"-- a Twitter analytical web dashboard app for Music Information Retrieval(MIR) researchers, musicians or engineers-- was developed to see if realtime streaming analytics could make a difference via data science music hacking!
