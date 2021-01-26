@@ -1,4 +1,5 @@
-# mcl-brand-sentiment-app🎹
+![](https://github.com/nickitaliano/mcl-mh-brand-sentiment-analysis-app/banner.png)
+# mh-mcl-brand-sentiment-app🎹
 "Apitzer"-- a Twitter analytical web dashboard app for Music Information Retrieval(MIR) researchers, musicians or engineers-- was developed to see if realtime streaming analytics could make a difference via data science music hacking!
 
 [Twitter's Search API](https://en.wikipedia.org/wiki/Dashboard_(business))TwitterThe main dashboard features were written in Dash(Python Web App Framework) and the app envoroments can be deployed locally(Unix) and remotly. Users can monitor exploratory analyses and NLP(Natural Language Processing)
