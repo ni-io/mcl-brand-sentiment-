@@ -1,20 +1,19 @@
 ![alt text](https://github.com/nickitaliano/mcl-mh-brand-sentiment-analysis-app/blob/master/MooTweet.jpg?raw=true)
 
-# mh-mcl-brand-sentiment-app:MooTweet🎹
----
+#MooTweet:mh-mcl-brand-sentiment-app🎹
+
 "Mootweet"-- a Twitter analytical web dashboard app for Music Information Retrieval(MIR) researchers, musicians or engineers-- was developed to see if realtime streaming analytics could make a difference via data science music hacking!
 
-[Twitter's Search API](https://en.wikipedia.org/wiki/Dashboard_(business))TwitterThe main dashboard features were written in Dash(Python Web App Framework) and the app envoroments can be deployed locally(Unix) and remotly. Users can monitor exploratory analyses and NLP(Natural Language Processing)
+The main dashboard streams data via [Twitter's Search API](https://en.wikipedia.org/wiki/Dashboard_(business)) and features were written in Dash(Python Web App Framework). The app envoroments can be deployed locally(Unix) and remotly(Heroku), and users can monitor exploratory analyses and NLP(Natural Language Processing) insights!
 
 ## How to use it
-$ # Install the Heroku CLI
-$ # Download and install the Heroku CLI.
+# Download and install the Heroku CLI
 
-```bash
+'bash'
 $ # If you haven't already, log in to your Heroku account and follow the prompts to create a new SSH public key.
 $ heroku login
 
-```bash
+'bash'
 $ # Create a new Git repository
 $ # Initialize a git repository in a new or existing directory
 $ cd my-project/
@@ -23,7 +22,7 @@ $ heroku git:remote -a myapp
 $ # Deploy your application
 $ # Commit your code to the repository and deploy it to Heroku using Git.
 
-```bash
+'bash'
 $ git add .
 $ git commit -am "make it better"
 $ git push heroku master
@@ -31,7 +30,7 @@ $ git push heroku master
 Existing Git repository
 For existing repositories, simply add the heroku remote
 
-```bash
+'bash'
 $ heroku git:remote -a apitzer
 
 ## Get the code
