@@ -1,4 +1,4 @@
-![alt text](https://github.com/nickitaliano/mcl-mh-brand-sentiment-analysis-app/blob/master/banner.png?raw=true)
+![alt text](https://github.com/nickitaliano/mcl-mh-brand-sentiment-analysis-app/blob/master/MooTweet.jpg?raw=true)
 
 # mh-mcl-brand-sentiment-app🎹
 "Zootweet"-- a Twitter analytical web dashboard app for Music Information Retrieval(MIR) researchers, musicians or engineers-- was developed to see if realtime streaming analytics could make a difference via data science music hacking!
