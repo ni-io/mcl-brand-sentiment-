@@ -9,11 +9,11 @@ The main dashboard streams data via [Twitter's Search API](https://en.wikipedia.
 ## How to use it
 # Download and install the Heroku CLI
 
-'bash'
+```'bash'
 $ # If you haven't already, log in to your Heroku account and follow the prompts to create a new SSH public key.
 $ heroku login
 
-'bash'
+```bash
 $ # Create a new Git repository
 $ # Initialize a git repository in a new or existing directory
 $ cd my-project/
@@ -22,7 +22,7 @@ $ heroku git:remote -a myapp
 $ # Deploy your application
 $ # Commit your code to the repository and deploy it to Heroku using Git.
 
-'bash'
+```bash
 $ git add .
 $ git commit -am "make it better"
 $ git push heroku master
@@ -30,7 +30,7 @@ $ git push heroku master
 Existing Git repository
 For existing repositories, simply add the heroku remote
 
-'bash'
+```bash
 $ heroku git:remote -a apitzer
 
 ## Get the code
