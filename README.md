@@ -131,7 +131,7 @@ Visit `http://localhost:8001` in your browser. The app should be up & running.
 <br/>
 
 ## Credits & Links
-
+---
 <br/>
 
 ### What is [Flask](https://www.palletsprojects.com/p/flask/)
