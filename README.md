@@ -1,7 +1,8 @@
 ![alt text](https://github.com/nickitaliano/mcl-mh-brand-sentiment-analysis-app/blob/master/MooTweet.jpg?raw=true)
 
-# mh-mcl-brand-sentiment-app🎹
-"Zootweet"-- a Twitter analytical web dashboard app for Music Information Retrieval(MIR) researchers, musicians or engineers-- was developed to see if realtime streaming analytics could make a difference via data science music hacking!
+# mh-mcl-brand-sentiment-app:MooTweet🎹
+---
+"Mootweet"-- a Twitter analytical web dashboard app for Music Information Retrieval(MIR) researchers, musicians or engineers-- was developed to see if realtime streaming analytics could make a difference via data science music hacking!
 
 [Twitter's Search API](https://en.wikipedia.org/wiki/Dashboard_(business))TwitterThe main dashboard features were written in Dash(Python Web App Framework) and the app envoroments can be deployed locally(Unix) and remotly. Users can monitor exploratory analyses and NLP(Natural Language Processing)
 
@@ -88,7 +89,7 @@ $ # --port=5000    - specify the app port (default 5000)
 
 ## Deployment
 
-The 2 module app is provided with a basic configuration to be executed in [Gunicorn](https://gunicorn.org/).
+The 2 module app-- sharing a single Postgres database-- is provided with a basic configuration to be executed in [Gunicorn](https://gunicorn.org/).
 
 <br/>
 
@@ -131,7 +132,7 @@ Visit `http://localhost:8001` in your browser. The app should be up & running.
 <br/>
 
 ## Credits & Links
----
+
 <br/>
 
 ### What is [Flask](https://www.palletsprojects.com/p/flask/)
@@ -146,9 +147,8 @@ A dashboard is a set of pages that are easy to read and offer information to the
 
 <br/>
 
+**[Ackknowledgements]
+
 **[Chulong-Li](https://github.com/Chulong-Li/Real-time-Sentiment-Tracking-on-Twitter-for-Brand-Improvement-and-Trend-Recognition)**, a Data Scientist out of Ohio State, created an amazing real-time interactive web app; based on data pipelines using streaming Twitter data, automated sentiment analysis and MySQL&PostgreSQL database (Deployed on Heroku). **[As author on Medium](https://medium.com/@ChulongLi)** he outlined a complimentary project overview, plus tutorial, to get you "zero-to-dash-hero"👍
 
 <br/>
-
----
-**[Ackknowledgements](Good Vibes Only -NI=EasterEGG+#+).
