@@ -86,7 +86,7 @@ $ # --port=5000    - specify the app port (default 5000)
 
 <br/>
 
-## Deployment
+# Deployment
 
 The 2 module app-- sharing a single Postgres database-- is provided with a basic configuration to be executed in [Gunicorn](https://gunicorn.org/).
 
@@ -130,7 +130,7 @@ Visit `http://localhost:8001` in your browser. The app should be up & running.
 
 <br/>
 
-## Credits & Links
+# Credits & Links
 
 ### What is [Flask](https://www.palletsprojects.com/p/flask/)
 
