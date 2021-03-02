@@ -110,10 +110,9 @@ Visit `http://localhost:5005` in your browser. The app should be up & running.
 
 <br/>
 
-### Gunicorn
----
+## Gunicorn
 
-[Gunicorn](https://gunicorn.org/) 'Green Unicorn' is a Python WSGI HTTP Server for UNIX.
+Gunicorn 'Green Unicorn' is a Python WSGI HTTP Server for UNIX.
 
 > Install using pip
 
