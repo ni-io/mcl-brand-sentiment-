@@ -93,7 +93,8 @@ The 2 module app-- sharing a single Postgres database-- is provided with a basic
 <br/>
 
 ## Heroku
-### The application can be easily executed in [Heroku](https:/heroku.com). remote git branch/master. The steps:
+
+The application can be easily executed in [Heroku](https:/heroku.com). remote git branch/master. The steps:
 
 > Get the code
 
