@@ -9,14 +9,16 @@ The main dashboard streams data via [Twitter's Search API](https://en.wikipedia.
 # How to use it
 ## Download and install the Heroku CLI
 
-If you haven't already, log in to your Heroku account and follow the prompts to create a new SSH public key.
-```'bash'
-$ # 
+> If you haven't already, log in to your Heroku account and follow the prompts to create a new SSH public key.
+
+```'bash' 
 $ heroku login
+```
+
+> Create a new Git repository
+> Initialize a git repository in a new or existing directory
 
 ```bash
-$ # Create a new Git repository
-$ # Initialize a git repository in a new or existing directory
 $ cd my-project/
 $ git init
 $ heroku git:remote -a myapp
@@ -27,37 +29,42 @@ $ # Commit your code to the repository and deploy it to Heroku using Git.
 $ git add .
 $ git commit -am "make it better"
 $ git push heroku master
+```
 
-Existing Git repository
-For existing repositories, simply add the heroku remote
+### Existing Git repository
+> For existing repositories, simply add the heroku remote
 
 ```bash
-$ heroku git:remote -a apitzer
-
-## Get the code
+$ heroku git:remote -a myapp
+```
+> Get the code
 ```bash
-git clone https://github.com/nickitaliano/mir-flask-app.git
+git clone https://github.com/nickitaliano/mcl-mh-brand-sentiment-analysis-app.git
 cd mir-flask-app
 ```
 
+> Virtualenv modules installation (Unix based systems)
+
 ```bash
-$ # Virtualenv modules installation (Unix based systems)
 $ virtualenv --no-site-packages env
 $ source env/bin/activate
 ```
 
+> Virtualenv modules installation (Windows based systems)
+
 ```bash
-$ # Virtualenv modules installation (Windows based systems)
 $ # virtualenv --no-site-packages env
 $ # .\env\Scripts\activate
 ```
-```bash
- Install modules - SQLite Database
-$ pip3 install -r requirements.txt
-```
+
+> Install modules - SQLite Database
 
 ```bash
-$ # OR with PostgreSQL connector
+$ pip3 install -r requirements.txt
+```
+> OR with PostgreSQL connector
+
+```bash
 $ # pip install -r requirements-pgsql.txt
 ```
 
