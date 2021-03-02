@@ -92,7 +92,8 @@ The 2 module app-- sharing a single Postgres database-- is provided with a basic
 
 <br/>
 
-## [Heroku](https:/heroku.com).The application can be easily executed in a heroku remote git branch/master. The steps:
+## Heroku
+### The application can be easily executed in [Heroku](https:/heroku.com). remote git branch/master. The steps:
 
 > Get the code
 
@@ -109,10 +110,10 @@ Visit `http://localhost:5005` in your browser. The app should be up & running.
 
 <br/>
 
-### [Gunicorn](https://gunicorn.org/)
+### Gunicorn
 ---
 
-Gunicorn 'Green Unicorn' is a Python WSGI HTTP Server for UNIX.
+[Gunicorn](https://gunicorn.org/) 'Green Unicorn' is a Python WSGI HTTP Server for UNIX.
 
 > Install using pip
 
@@ -131,8 +132,6 @@ Visit `http://localhost:8001` in your browser. The app should be up & running.
 <br/>
 
 ## Credits & Links
-
-<br/>
 
 ### What is [Flask](https://www.palletsprojects.com/p/flask/)
 
