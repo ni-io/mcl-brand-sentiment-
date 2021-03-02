@@ -9,8 +9,9 @@ The main dashboard streams data via [Twitter's Search API](https://en.wikipedia.
 # How to use it
 ## Download and install the Heroku CLI
 
+If you haven't already, log in to your Heroku account and follow the prompts to create a new SSH public key.
 ```'bash'
-$ # If you haven't already, log in to your Heroku account and follow the prompts to create a new SSH public key.
+$ # 
 $ heroku login
 
 ```bash
