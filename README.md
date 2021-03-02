@@ -112,9 +112,8 @@ $ cd mir-flask-app
 ```
 
 > Create the app in Heroku
-
 ```bash
-Visit `http://localhost:5005` in your browser. The app should be up & running. 
+#Visit `http://localhost:5005` in your browser. The app should be up & running. 
 ```
 
 <br/>
@@ -135,7 +134,7 @@ $ gunicorn --bind 0.0.0.0:8001 run:app
 Serving on http://localhost:8001
 ```
 
-Visit `http://localhost:8001` in your browser. The app should be up & running.
+> Visit `http://localhost:8001` in your browser. The app should be up & running.
 
 <br/>
 
