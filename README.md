@@ -15,6 +15,7 @@ The main dashboard streams data via [Twitter's Search API](https://en.wikipedia.
 ```'bash 
 $ heroku login
 ```
+<br/>
 
 > Create a new Git repository and initialize a git repository in a new or existing directory
 ```bash
@@ -43,6 +44,8 @@ cd mcl-mh-brand-sentiment-analysis-app
 ```
 <br/>
 
+<br/>
+
 > Virtualenv modules installation (Unix based systems)
 ```bash
 $ virtualenv --no-site-packages env
@@ -54,6 +57,8 @@ $ source env/bin/activate
 $ # virtualenv --no-site-packages env
 $ # .\env\Scripts\activate
 ```
+
+<br/>
 
 <br/>
 
@@ -69,6 +74,8 @@ $ # pip install -r requirements-pgsql.txt
 
 <br/>
 
+<br/>
+
 > Set the FLASK_APP environment variable(development only)
 ```bash
 $ (Unix/Mac) export FLASK_APP=run.py
@@ -81,6 +88,8 @@ $ # (Unix/Mac) export FLASK_ENV=development
 $ # (Windows) set FLASK_ENV=development
 $ (Powershell) $env:FLASK_ENV = "development"
 ```
+
+<br/>
 
 <br/>
 
@@ -113,10 +122,10 @@ $ git clone https://github.com/nickitaliano/mcl-mh-brand-sentiment-analysis-app
 $ cd mcl-mh-brand-sentiment-analysis-app
 ```
 
+<br/>
+
 # Deployment
 > Visit `http://localhost:5005` in your browser. The app should be up & running. 
-
-<br/>
 
 ## Gunicorn
 
