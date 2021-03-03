@@ -90,9 +90,8 @@ $ --port=5000    - specify the app port (default 5000)
 $ flask run --host=0.0.0.0 --port=5000
 ```
 
-```bash
- #  Access the dashboard in browser: http://127.0.0.1:5000/
-```
+> Access the dashboard in browser: `http://127.0.0.1:5000/`
+
 
 <br/>
 
