@@ -23,7 +23,7 @@ $ cd my-project/
 $ git init
 $ heroku git:remote -a myapp
 ```
-### Deploy your application
+## Deploy your application
 > Commit your code to the repository and deploy it to Heroku using Git.
 ```bash
 $ git add .
@@ -139,6 +139,8 @@ $ gunicorn --bind 0.0.0.0:8001 run:app
 ### What is Flask?
 ---
 [Flask](https://www.palletsprojects.com/p/flask/) is a lightweight WSGI web application framework. It is designed to make getting started quick and easy, with the ability to scale up to complex applications. It began as a simple wrapper around Werkzeug and Jinja and has become one of the most popular Python web application frameworks.
+
+<br/>
 
 ### What is a dashboard?
 ---
