@@ -97,7 +97,7 @@ $ --port=5000    - specify the app port (default 5000)
 
 <br/>
 
-# Deployment
+# Create the app in Heroku
 
 The 2 module app-- sharing a single Postgres database-- is provided with a basic configuration to be executed in [Gunicorn](https://gunicorn.org/).
 
@@ -113,7 +113,7 @@ $ git clone https://github.com/nickitaliano/mcl-mh-brand-sentiment-analysis-app
 $ cd mcl-mh-brand-sentiment-analysis-app
 ```
 
-# Create the app in Heroku
+# Deployment
 > Visit `http://localhost:5005` in your browser. The app should be up & running. 
 
 <br/>
