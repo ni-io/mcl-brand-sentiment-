@@ -8,7 +8,7 @@ The main dashboard streams data via [Twitter's Search API](https://en.wikipedia.
 
 <br/>
 
-# How to use it
+# How to use it(Unix/Mac)
 ## Download and install the Heroku CLI
 
 > If you haven't already, log in to your Heroku account and follow the prompts to create a new SSH public key.
@@ -23,7 +23,7 @@ $ cd my-project/
 $ git init
 $ heroku git:remote -a myapp
 ```
-###Deploy your application
+### Deploy your application
 > Commit your code to the repository and deploy it to Heroku using Git.
 ```bash
 $ git add .
@@ -39,8 +39,8 @@ $ heroku git:remote -a myapp
 ```
 > Get the code
 ```bash
-git clone https://github.com/nickitaliano/mcl-mh-brand-sentiment-analysis-app.git
-cd mcl-mh-brand-sentiment-analysis-app
+$ git clone https://github.com/nickitaliano/mcl-mh-brand-sentiment-analysis-app.git
+$ cd mcl-mh-brand-sentiment-analysis-app/
 ```
 <br/>
 
@@ -54,8 +54,8 @@ $ source env/bin/activate
 
 > Virtualenv modules installation (Windows based systems)
 ```bash
-$ # virtualenv --no-site-packages env
-$ # .\env\Scripts\activate
+$ virtualenv --no-site-packages env
+$ .\env\Scripts\activate
 ```
 
 <br/>
@@ -69,7 +69,7 @@ $ pip3 install -r requirements.txt
 
 > OR with PostgreSQL connector
 ```bash
-$ # pip install -r requirements-pgsql.txt
+$ pip install -r requirements-pgsql.txt
 ```
 
 <br/>
@@ -79,14 +79,10 @@ $ # pip install -r requirements-pgsql.txt
 > Set the FLASK_APP environment variable(development only)
 ```bash
 $ (Unix/Mac) export FLASK_APP=run.py
-$ (Windows) set FLASK_APP=run.py
-$ (Powershell) $env:FLASK_APP = ".\run.py"
 ```
 > Set up the DEBUG environment
 ```bash
-$ # (Unix/Mac) export FLASK_ENV=development
-$ # (Windows) set FLASK_ENV=development
-$ (Powershell) $env:FLASK_ENV = "development"
+$ (Unix/Mac) export FLASK_ENV=development
 ```
 
 <br/>
@@ -97,7 +93,7 @@ $ (Powershell) $env:FLASK_ENV = "development"
 ```bash
 $ --host=0.0.0.0 - expose the app on all network interfaces (default 127.0.0.1)
 $ --port=5000    - specify the app port (default 5000)  
- flask run --host=0.0.0.0 --port=5000
+$ flask run --host=0.0.0.0 --port=5000
 ```
 
 ```bash
@@ -153,10 +149,10 @@ $ gunicorn --bind 0.0.0.0:8001 run:app
 [Flask](https://www.palletsprojects.com/p/flask/) is a lightweight WSGI web application framework. It is designed to make getting started quick and easy, with the ability to scale up to complex applications. It began as a simple wrapper around Werkzeug and Jinja and has become one of the most popular Python web application frameworks.
 
 ### What is a dashboard?
-A [dashboard](https://en.wikipedia.org/wiki/Dashboard_(business)) is a set of pages that are easy to read and offer information to the user in real-time regarding his business. A dashboard usually consists of graphical representations of the current status and trends within an organization. Having a well-designed dashboard will give you the possibility to act and make informed decisions based on the data that your business provides - *definition provided by [Creative-Tim - Free Dashboard Templates](https://www.creative-tim.com/blog/web-design/free-dashboard-templates/?ref=appseed)*.
+A [dashboard](https://en.wikipedia.org/wiki/Dashboard_(business)) is a set of pages that are easy to read and offer information to the user in real-time regarding their business. A dashboard usually consists of graphical representations of the current status and trends within an organization. Having a well-designed dashboard will give you the possibility to act and make informed decisions based on the data that your business provides - *definition provided by [Creative-Tim - Free Dashboard Templates](https://www.creative-tim.com/blog/web-design/free-dashboard-templates/?ref=appseed)*.
 
 <br/>
 
 ### Ackknowledgements
 
-**[Chulong-Li](https://github.com/Chulong-Li/Real-time-Sentiment-Tracking-on-Twitter-for-Brand-Improvement-and-Trend-Recognition)**, a Data Scientist out of Ohio State, created an amazing real-time interactive web app; based on data pipelines using streaming Twitter data, automated sentiment analysis and MySQL&PostgreSQL database (Deployed on Heroku). **[As author on Medium](https://medium.com/@ChulongLi)** he outlined a complimentary project overview, plus tutorial, to get you "zero-to-dash-hero"👍
+**[Chulong-Li](https://github.com/Chulong-Li/Real-time-Sentiment-Tracking-on-Twitter-for-Brand-Improvement-and-Trend-Recognition)**, a Data Scientist out of Ohio State, created an amazing real-time interactive web app; based on data pipelines using streaming Twitter data, automated sentiment analysis and MySQL/PostgreSQL database (Deployed on Heroku). **[As author on Medium](https://medium.com/@ChulongLi)** he outlined a complimentary project overview, plus tutorial, to get you "zero-to-dash-hero"👍
