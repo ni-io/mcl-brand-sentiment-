@@ -102,7 +102,7 @@ $ flask run --host=0.0.0.0 --port=5000
 
 <br/>
 
-# Create the app in Heroku
+# Creating the app using Heroku
 
 The 2 module app-- sharing a single Postgres database-- is provided with a basic configuration to be executed in [Gunicorn](https://gunicorn.org/).
 
@@ -122,8 +122,6 @@ $ cd mcl-mh-brand-sentiment-analysis-app
 
 > Visit `http://localhost:5005` in your browser. The app should be up & running.
 ## Deployment 
-
-## Gunicorn
 
 Gunicorn 'Green Unicorn' is a Python WSGI HTTP Server for UNIX.
 
