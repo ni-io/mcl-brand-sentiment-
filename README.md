@@ -52,12 +52,6 @@ $ virtualenv --no-site-packages env
 $ source env/bin/activate
 ```
 
-> Virtualenv modules installation (Windows based systems)
-```bash
-$ virtualenv --no-site-packages env
-$ .\env\Scripts\activate
-```
-
 <br/>
 
 <br/>
@@ -102,7 +96,7 @@ $ flask run --host=0.0.0.0 --port=5000
 
 <br/>
 
-# Creating the app using Heroku
+# Creating the app in Heroku
 
 The 2 module app-- sharing a single Postgres database-- is provided with a basic configuration to be executed in [Gunicorn](https://gunicorn.org/).
 
