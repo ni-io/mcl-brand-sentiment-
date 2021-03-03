@@ -1,88 +1,91 @@
 ![alt text](https://github.com/nickitaliano/mcl-mh-brand-sentiment-analysis-app/blob/master/MooTweet.jpg?raw=true)
 
-# MooTweet: mh-mcl-brand-sentiment-app 🎹
+# MooTweet:mh-mcl-brand-sentiment-app 🎹
 
 "Mootweet"-- a Twitter analytical web dashboard app for Music Information Retrieval(MIR) researchers, musicians or engineers-- was developed to see if realtime streaming analytics could make a difference via data science music hacking!
 
 The main dashboard streams data via [Twitter's Search API](https://en.wikipedia.org/wiki/Dashboard_(business)) and features were written in Dash(Python Web App Framework). The app envoroments can be deployed locally(Unix) and remotly(Heroku), and users can monitor exploratory analyses and NLP(Natural Language Processing) insights!
 
+<br/>
+
 # How to use it
 ## Download and install the Heroku CLI
 
 > If you haven't already, log in to your Heroku account and follow the prompts to create a new SSH public key.
-
-```'bash' 
+```'bash 
 $ heroku login
 ```
 
-> Create a new Git repository
-> Initialize a git repository in a new or existing directory
-
+> Create a new Git repository and initialize a git repository in a new or existing directory
 ```bash
 $ cd my-project/
 $ git init
 $ heroku git:remote -a myapp
-$ # Deploy your application
-$ # Commit your code to the repository and deploy it to Heroku using Git.
-
+```
+####Deploy your application
+> Commit your code to the repository and deploy it to Heroku using Git.
 ```bash
 $ git add .
 $ git commit -am "make it better"
 $ git push heroku master
 ```
+<br/>
 
-### Existing Git repository
-> For existing repositories, simply add the heroku remote
-
+#### Existing Git repository
+> For existing repositories, simply add the heroku remote!
 ```bash
 $ heroku git:remote -a myapp
 ```
 > Get the code
 ```bash
 git clone https://github.com/nickitaliano/mcl-mh-brand-sentiment-analysis-app.git
-cd mir-flask-app
+cd mcl-mh-brand-sentiment-analysis-app
 ```
+<br/>
 
 > Virtualenv modules installation (Unix based systems)
-
 ```bash
 $ virtualenv --no-site-packages env
 $ source env/bin/activate
 ```
 
 > Virtualenv modules installation (Windows based systems)
-
 ```bash
 $ # virtualenv --no-site-packages env
 $ # .\env\Scripts\activate
 ```
 
-> Install modules - SQLite Database
+<br/>
 
+> Install modules - SQLite Database
 ```bash
 $ pip3 install -r requirements.txt
 ```
-> OR with PostgreSQL connector
 
+> OR with PostgreSQL connector
 ```bash
 $ # pip install -r requirements-pgsql.txt
 ```
 
+<br/>
+
+> Set the FLASK_APP environment variable(development only)
 ```bash
-$ # Set the FLASK_APP environment variable(development only)
 $ (Unix/Mac) export FLASK_APP=run.py
 $ (Windows) set FLASK_APP=run.py
 $ (Powershell) $env:FLASK_APP = ".\run.py"
 ```
+> Set up the DEBUG environment
 ```bash
-$ # Set up the DEBUG environment
 $ # (Unix/Mac) export FLASK_ENV=development
 $ # (Windows) set FLASK_ENV=development
 $ (Powershell) $env:FLASK_ENV = "development"
 ```
 
+<br/>
+
+> Start the application (development mode)
 ```bash
-# Start the application (development mode)
 $ --host=0.0.0.0 - expose the app on all network interfaces (default 127.0.0.1)
 $ --port=5000    - specify the app port (default 5000)  
  flask run --host=0.0.0.0 --port=5000
@@ -98,7 +101,6 @@ $ --port=5000    - specify the app port (default 5000)
 
 The 2 module app-- sharing a single Postgres database-- is provided with a basic configuration to be executed in [Gunicorn](https://gunicorn.org/).
 
-<br/>
 
 ## Heroku
 
