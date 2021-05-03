@@ -1,4 +1,4 @@
-![alt text](https://github.com/nickitaliano/mcl-mh-brand-sentiment-analysis-app/blob/master/MooTweet.jpg?raw=true)
+![alt text](https://github.com/nickitaliano/mcl-mh-brand-sentiment-analysis-app/blob/master/MooTweet.png?raw=true)
 
 # MooTweet:mh-mcl-brand-sentiment-app 🎹
 
