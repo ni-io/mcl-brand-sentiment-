@@ -1,6 +1,9 @@
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
+import dash_bootstrap_components as dbc
+import plotly.io as pio
+import plotly.express as px
 from dash.dependencies import Input, Output
 import pandas as pd
 import plotly.graph_objs as go
@@ -22,31 +25,83 @@ from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from textblob import TextBlob
 
-external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
-app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
-app.title = 'Real-Time Twitter Monitor'
+external_stylesheets = [
+    "static/css/style.css", # custom CSS file
+    "https://codepen.io/chriddyp/pen/bWLwgP.css",
+]
+
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.SLATE])
+app.title = "MooTweet"
+app.description = "Real-time Twitter Sentiment Analysis"
 
 server = app.server
+#app.config.suppress_callback_exceptions = True
+app.index_string = """<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-458QGY6CQV"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-458QGY6CQV');
+        </script>
+        {%metas%}
+        <title>{%title%}</title>
+        {%favicon%}
+        {%css%}
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="MooTweet: Real-time Twitter Sentiment Analysis">
+        <meta property="og:site_name" content="https://www.mootweet.app">
+        <meta property="og:url" content="https://www.mootweet.app">
+        <meta property="og:image" content="https://github.com/nickitaliano/mcl-mh-brand-sentiment-analysis-app/blob/master/favicon.ico">
+        <meta property="article:published_time" content="2021-04-20">
+    </head>
+    <body>
+        {%app_entry%}
+        <footer>
+            {%config%}
+            {%scripts%}
+            {%renderer%}
+        </footer>
+    </body>
+</html>"""
 
 app.layout = html.Div(children=[
-    html.H2('Real-time Twitter Sentiment Analysis for Brand Improvement and Topic Tracking ', style={
-        'textAlign': 'center'
+
+    html.H1('MooTweet', style={
+      'textAlign': 'center'
     }),
-    html.H4('(Last updated: Jan 23, 2021)', style={
-        'textAlign': 'right'
+    html.H2('Real-time Sentiment Analysis for Brand Improvement and Topic Tracking via Twitter',style={
+      'textAlign': 'center'
+    }),
+    html.H3('(Last updated: April 20th, 2021)', style={
+      'textAlign': 'right'
     }),
 
 
     html.Div(id='live-update-graph'),
     html.Div(id='live-update-graph-bottom'),
 
-    # Author's Words
+  # Author's Words
     html.Div(
         className='row',
         children=[
-            dcc.Markdown("__Author's Words__:) Why dive into the music industry using data driven hacks and music accessability? This project for the Music Hackathon/Music Community Lab, a non-for-profit organization which hosts events open to scientists, artists and multifacited volunteers like myself. We aim, with this demo, to quantify and enhance how impactful the organization is realized on twitter, currently scaling this project to capture the BIG data picture! The project is on and was selected for the Artic World Archive program[GitHub](https://github.com/nickitaliano/mcl-mh-brand-sentiment-analysis-app)"),
-        ],style={'width': '70%', 'marginLeft': 70}
+        dcc.Markdown('''
+                🐮__*MooTweet*__ was created for the [*Music Hackathon/Music Community Lab organization*](https://twitter.com/musichackathon); a non-for-profit
+                team that hosts events open to scientists, artists and multifaceted volunteers alike...
+
+                The data product combines Twitter's streaming API with *Natural Language Processing(NLP)* algorithms and machine learning libraries
+                in order to quantify the the organizations impact, as well as report actionable insights, from their real-time Twitter data.
+
+                In addition, the projects Github repository was selected for the Arctic World Archive program's [GitHub Arctic Vault](https://archiveprogram.github.com/arctic-vault/)
+                which stores the source code on halide film for the next 1000 years!
+
+                '''),
+        ],style={'width': '35%', 'marginLeft': 70}
     ),
     html.Br(),
 
@@ -54,37 +109,37 @@ app.layout = html.Div(children=[
         className='row',
         children=[
             html.Div(
-                className='three columns',
+                className='three_columns',
                 children=[
                     html.P(
-                    'Data extracted from:'
+                    'Data:'
                     ),
                     html.A(
-                        'Twitter API',
+                        'Twitter',
                         href='https://developer.twitter.com'
                     )
                 ]
             ),
             html.Div(
-                className='three columns',
+                className='three_columns',
                 children=[
                     html.P(
-                    'Code avaliable at:'
+                    'Code:'
                     ),
                     html.A(
                         'GitHub',
-                        href='https://github.com/nickitaliano/mcl-mh-brand-sentiment-analysis-app'
+                        href='https://github.com/nickitaliano/mcl-mh-brand-sentiment-analysis-apps'
                     )
                 ]
             ),
-            html.Div(
+                        html.Div(
                 className='three columns',
                 children=[
                     html.P(
-                    'Made with:'
+                    'Stack:'
                     ),
                     html.A(
-                        'Dash / Plot.ly',
+                        'Dash/Plot.ly',
                         href='https://plot.ly/dash/'
                     )
                 ]
@@ -93,7 +148,7 @@ app.layout = html.Div(children=[
                 className='three columns',
                 children=[
                     html.P(
-                    'Author:'
+                    'Developer:'
                     ),
                     html.A(
                         'Nick Italiano',
@@ -121,20 +176,20 @@ def update_graph_live(n):
     # Loading data from Heroku PostgreSQL
     DATABASE_URL = os.environ['DATABASE_URL']
     conn = psycopg2.connect(DATABASE_URL, sslmode='require')
-    query = "SELECT id_str, text, created_at, polarity, user_location, user_followers_count FROM {}".format(settings.TABLE_NAME)
+    query = "SELECT id_str, id_text, created_at, polarity, user_location, user_followers_count FROM {}".format(settings.TABLE_NAME)
     df = pd.read_sql(query, con=conn)
 
 
-    # Convert UTC into PDT
-    df['created_at'] = pd.to_datetime(df['created_at']).apply(lambda x: x - datetime.timedelta(hours=7))
+    # Convert UTC into EDT/EST
+    df['created_at'] = pd.to_datetime(df['created_at']).apply(lambda x: x - datetime.timedelta(hours=5))
 
     # Clean and transform data to enable time series
     result = df.groupby([pd.Grouper(key='created_at', freq='10s'), 'polarity']).count().unstack(fill_value=0).stack().reset_index()
     result = result.rename(columns={"id_str": "Num of '{}' mentions".format(settings.TRACK_WORDS[0]), "created_at":"Time"})
     time_series = result["Time"][result['polarity']==0].reset_index(drop=True)
 
-    min10 = datetime.datetime.now() - datetime.timedelta(hours=7, minutes=10)
-    min20 = datetime.datetime.now() - datetime.timedelta(hours=7, minutes=20)
+    min10 = datetime.datetime.now() - datetime.timedelta(hours=5, minutes=10)
+    min20 = datetime.datetime.now() - datetime.timedelta(hours=5, minutes=20)
 
     neu_num = result[result['Time']>min10]["Num of '{}' mentions".format(settings.TRACK_WORDS[0])][result['polarity']==0].sum()
     neg_num = result[result['Time']>min10]["Num of '{}' mentions".format(settings.TRACK_WORDS[0])][result['polarity']==-1].sum()
@@ -144,23 +199,22 @@ def update_graph_live(n):
     query = "SELECT daily_user_num, daily_tweets_num, impressions FROM Back_Up;"
     back_up = pd.read_sql(query, con=conn)
     daily_tweets_num = back_up['daily_tweets_num'].iloc[0] + result[-6:-3]["Num of '{}' mentions".format(settings.TRACK_WORDS[0])].sum()
-    daily_impressions = back_up['impressions'].iloc[0] + df[df['created_at'] > (datetime.datetime.now() - datetime.timedelta(hours=7, seconds=10))]['user_followers_count'].sum()
+    daily_impressions = back_up['impressions'].iloc[0] + df[df['created_at'] > (datetime.datetime.now() - datetime.timedelta(hours=5, seconds=10))]['user_followers_count'].sum()
     cur = conn.cursor()
 
-    PDT_now = datetime.datetime.now() - datetime.timedelta(hours=7)
-    if PDT_now.strftime("%H%M")=='0000':
-        cur.execute("UPDATE Back_Up SET daily_tweets_num = 0, impressions = 0;")
+    EDT_now = datetime.datetime.now() - datetime.timedelta(hours=5)
+    if EDT_now.strftime("%H%M")=='0000':
+        cur.execute("UPDATE back_up SET daily_tweets_num = 0, impressions = 0;")
     else:
-        cur.execute("UPDATE Back_Up SET daily_tweets_num = {}, impressions = {};".format(daily_tweets_num, daily_impressions))
+        cur.execute("UPDATE back_up SET daily_tweets_num = '{}', impressions = '{}';".format(daily_tweets_num, daily_impressions))
     conn.commit()
     cur.close()
     conn.close()
 
     # Percentage Number of Tweets changed in Last 10 mins
-
     count_now = df[df['created_at'] > min10]['id_str'].count()
     count_before = df[ (min20 < df['created_at']) & (df['created_at'] < min10)]['id_str'].count()
-    percent = (count_now-count_before)/count_before*100
+    percent = (((count_now)-(count_before))//(count_before))*100
     # Create the graph
     children = [
                 html.Div([
@@ -196,7 +250,14 @@ def update_graph_live(n):
                                         line=dict(width=0.5, color='rgb(184, 247, 212)'),
                                         stackgroup='three'
                                     )
-                                ]
+                                ],
+                                'layout':{
+                                    'fig_bgcolor': 'rgb(255, 255, 255)',
+                                    'plot_bgcolor': 'rgba(0, 0, 0, 0)',
+                                    'paper_bgcolor': 'rgba(0, 0, 0, 0)',
+                                    'font': {'color': '#FFFFFF'},
+
+                                }
                             }
                         )
                     ], style={'width': '73%', 'display': 'inline-block', 'padding': '0 0 0 20'}),
@@ -217,6 +278,10 @@ def update_graph_live(n):
                                 'layout':{
                                     'showlegend':False,
                                     'title':'Tweets In Last 10 Mins',
+                                    'fig_bgcolor': 'rgb(255, 255, 255)',
+                                    'plot_bgcolor': 'rgba(0, 0, 0, 0)',
+                                    'paper_bgcolor': 'rgba(0, 0, 0, 0)',
+                                    'font': {'color': '#FFFFFF'},
                                     'annotations':[
                                         dict(
                                             text='{0:.1f}K'.format((pos_num+neg_num+neu_num)/1000),
@@ -224,7 +289,8 @@ def update_graph_live(n):
                                                 size=40
                                             ),
                                             showarrow=False
-                                        )
+                                        ),
+
                                     ]
                                 }
 
@@ -297,7 +363,7 @@ def update_graph_live(n):
 
                         html.Div(
                             children=[
-                                html.P("Currently tracking \"Facebook\" brand (NASDAQ: FB) on Twitter in Pacific Daylight Time (PDT).",
+                                html.P("Currently tracking \"Music Hackathon\" brand (NASDAQ:----) on Twitter in Eastern Daylight Time (EDT).",
                                     style={
                                         'fontSize': 25
                                     }
@@ -323,15 +389,15 @@ def update_graph_bottom_live(n):
     # Loading data from Heroku PostgreSQL
     DATABASE_URL = os.environ['DATABASE_URL']
     conn = psycopg2.connect(DATABASE_URL, sslmode='require')
-    query = "SELECT id_str, text, created_at, polarity, user_location FROM {}".format(settings.TABLE_NAME)
+    query = "SELECT id_str, id_text, created_at, polarity, user_location FROM {}".format(settings.TABLE_NAME)
     df = pd.read_sql(query, con=conn)
     conn.close()
 
-    # Convert UTC into PDT
-    df['created_at'] = pd.to_datetime(df['created_at']).apply(lambda x: x - datetime.timedelta(hours=7))
+    # Convert UTC into EDT
+    df['created_at'] = pd.to_datetime(df['created_at']).apply(lambda x: x - datetime.timedelta(hours=5))
 
     # Clean and transform data to enable word frequency
-    content = ' '.join(df["text"])
+    content = ' '.join(df["id_text"])
     content = re.sub(r"http\S+", "", content)
     content = content.replace('RT ', ' ').replace('&amp;', 'and')
     content = re.sub('[^A-Za-z0-9]+', ' ', content)
@@ -403,9 +469,14 @@ def update_graph_bottom_live(n):
                                 )
                             ],
                             'layout':{
-                                'hovermode':"closest"
+                                'fig_bgcolor': 'rgb(255, 255, 255)',
+                                'plot_bgcolor': 'rgba(0, 0, 0, 0)',
+                                'paper_bgcolor': 'rgba(0, 0, 0, 0)',
+                                'font': {'color': '#FFFFFF'},
+                                'hovermode':'closest'
                             }
                         }
+
                     )
                 ], style={'width': '49%', 'display': 'inline-block', 'padding': '0 0 0 20'}),
                 html.Div([
@@ -422,14 +493,24 @@ def update_graph_bottom_live(n):
                                     geo = 'geo',
                                     colorbar_title = "Num in Log2",
                                     marker_line_color='white',
-                                    colorscale = ["#fdf7ff", "#835af1"],
+                                    colorscale = ['#fdf7ff', '#835af1'],
                                     #autocolorscale=False,
                                     #reversescale=True,
                                 )
                             ],
                             'layout': {
                                 'title': "Geographic Segmentation for US",
-                                'geo':{'scope':'usa'}
+                                'geo': {'scope':'usa',
+                                        'bgcolor': 'rgb(39, 44, 48)',
+                                        'lakecolor': 'rgb(39, 44, 48)',
+                                        #'landcolor': '#E5ECF6',
+                                        'showlakes': True,
+                                        'showland': True,
+                                        'subunitcolor': 'black'},
+                                'fig_bgcolor': 'rgb(255, 255, 255)',
+                                'plot_bgcolor': 'rgba(0, 0, 0, 0)',
+                                'paper_bgcolor': 'rgba(0, 0, 0, 0)',
+                                'font': {'color': '#FFFFFF'},
                             }
                         }
                     )
