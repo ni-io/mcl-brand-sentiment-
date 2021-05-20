@@ -41,13 +41,13 @@ app.index_string = """<!DOCTYPE html>
 <html>
     <head>
         <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-458QGY6CQV"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-TRACKING#"></script>
         <script>
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', 'G-458QGY6CQV');
+          gtag('config', 'G-TRACKING#');
         </script>
         {%metas%}
         <title>{%title%}</title>
