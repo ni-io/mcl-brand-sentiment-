@@ -56,12 +56,19 @@ $ git clone https://github.com/nickitaliano/mcl-mh-brand-sentiment-analysis-app.
 $ cd mcl-mh-brand-sentiment-analysis-app/
 ```
 
+
+<br/>
+
+<br/>
+
+
 > Virtualenv modules installation (Unix based systems)
 ```bash
 $ virtualenv --no-site-packages env
 $ source env/bin/activate
 ```
 
+<br/>
 
 <br/>
 
@@ -75,6 +82,7 @@ $ pip3 install -r requirements.txt
 $ pip install -r requirements-pgsql.txt
 ```
 
+<br/>
 
 <br/>
 
@@ -118,6 +126,11 @@ $ cd mcl-mh-brand-sentiment-analysis-app
 ```
 
 > Visit `http://localhost:5005` in your browser. The app should be up & running.
+
+
+<br/>
+
+
 ## Deployment 
 
 Gunicorn 'Green Unicorn' is a Python WSGI HTTP Server for UNIX.
