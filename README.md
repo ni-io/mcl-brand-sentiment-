@@ -139,8 +139,9 @@ $ gunicorn --bind 0.0.0.0:8001 run:app
 
 
 <br/>
-# Credits & Links
 
+
+## Credits & Links
 ### What is Flask?
 ---
 [Flask](https://www.palletsprojects.com/p/flask/) is a lightweight WSGI web application framework. It is designed to make getting started quick and easy, with the ability to scale up to complex applications. It began as a simple wrapper around Werkzeug and Jinja and has become one of the most popular Python web application frameworks.
@@ -154,4 +155,3 @@ A [dashboard](https://en.wikipedia.org/wiki/Dashboard_(business)) is a set of pa
 ### Ackknowledgements
 ---
 **[Chulong-Li](https://github.com/Chulong-Li/Real-time-Sentiment-Tracking-on-Twitter-for-Brand-Improvement-and-Trend-Recognition)**, a Data Scientist out of Ohio State, created an amazing real-time interactive web app; based on data pipelines using streaming Twitter data, automated sentiment analysis and MySQL/PostgreSQL database (Deployed on Heroku). **[As author on Medium](https://medium.com/@ChulongLi)** he outlined a complimentary project overview, plus tutorial, to get you "zero-to-dash-hero"👍
-<br/>
