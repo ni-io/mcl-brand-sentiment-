@@ -1,6 +1,6 @@
 ![alt text](https://github.com/nickitaliano/mcl-mh-brand-sentiment-analysis-app/blob/master/MooTweet.png?raw=true)
 
-<br/>
+<br>
 
 🐮**Mh-Mcl-Brand-Sentiment-App**🐮
 
@@ -10,8 +10,9 @@ The app features decision support, using Python's Dash and Flask framework, and 
 
 Users can then monitor exploratory features plus NLP(Natural Language Processing) insights!
 
-
 <br/>
+
+<br>
 
 # How to use it(Unix/Mac)
 ## Download and install the Heroku CLI
@@ -22,6 +23,8 @@ $ heroku login
 ```
 <br/>
 
+
+<br>
 > Create a new Git repository and initialize a git repository in a new or existing directory
 ```bash
 $ cd mootweet/
@@ -37,6 +40,8 @@ $ git push heroku master
 ```
 <br/>
 
+
+<br>
 ### Existing Git repository
 > For existing repositories, simply add the heroku remote!
 ```bash
@@ -49,7 +54,7 @@ $ cd mcl-mh-brand-sentiment-analysis-app/
 ```
 <br/>
 
-<br/>
+<br>
 
 > Virtualenv modules installation (Unix based systems)
 ```bash
@@ -59,7 +64,7 @@ $ source env/bin/activate
 
 <br/>
 
-<br/>
+<br>
 
 > Install modules - SQLite Database
 ```bash
@@ -73,7 +78,7 @@ $ pip install -r requirements-pgsql.txt
 
 <br/>
 
-<br/>
+<br>
 
 > Set the FLASK_APP environment variable(development only)
 ```bash
@@ -86,7 +91,7 @@ $ (Unix/Mac) export FLASK_ENV=development
 
 <br/>
 
-<br/>
+<br>
 
 > Start the application (development mode)
 ```bash
@@ -99,6 +104,8 @@ $ flask run --host=0.0.0.0 --port=5000
 
 
 <br/>
+
+<br>
 
 # Creating the app in Heroku
 
@@ -118,6 +125,7 @@ $ cd mcl-mh-brand-sentiment-analysis-app
 
 <br/>
 
+<br>
 > Visit `http://localhost:5005` in your browser. The app should be up & running.
 ## Deployment 
 
@@ -139,6 +147,7 @@ $ gunicorn --bind 0.0.0.0:8001 run:app
 
 <br/>
 
+<br>
 # Credits & Links
 
 ### What is Flask?
@@ -147,12 +156,14 @@ $ gunicorn --bind 0.0.0.0:8001 run:app
 
 <br/>
 
+<br>
 ### What is a dashboard?
 ---
 A [dashboard](https://en.wikipedia.org/wiki/Dashboard_(business)) is a set of pages that are easy to read and offer information to the user in real-time regarding their business. A dashboard usually consists of graphical representations of the current status and trends within an organization. Having a well-designed dashboard will give you the possibility to act and make informed decisions based on the data that your business provides - *definition provided by [Creative-Tim - Free Dashboard Templates](https://www.creative-tim.com/blog/web-design/free-dashboard-templates/?ref=appseed)*.
 
-<br/>
+<br>
 
 ### Ackknowledgements
 ---
 **[Chulong-Li](https://github.com/Chulong-Li/Real-time-Sentiment-Tracking-on-Twitter-for-Brand-Improvement-and-Trend-Recognition)**, a Data Scientist out of Ohio State, created an amazing real-time interactive web app; based on data pipelines using streaming Twitter data, automated sentiment analysis and MySQL/PostgreSQL database (Deployed on Heroku). **[As author on Medium](https://medium.com/@ChulongLi)** he outlined a complimentary project overview, plus tutorial, to get you "zero-to-dash-hero"👍
+<br>
