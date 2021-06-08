@@ -1,6 +1,6 @@
 ![alt text](https://github.com/nickitaliano/mcl-mh-brand-sentiment-analysis-app/blob/master/MooTweet.png?raw=true)
 
-#mh-mcl-brand-sentiment-app:MooTweet 🎹
+#Mh-Mcl-Brand-Sentiment-App 🎹
 
 "Mootweet"-- which started as a web app for Music Information Retrieval(MIR) researchers, musicians, and engineers-- is a real-time streaming analytics dashboard using both data science music hacking!
 
