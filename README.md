@@ -2,7 +2,7 @@
 
 <br/>
 
-# Mh-Mcl-Brand-Sentiment-App 🐮
+# Mh-Mcl-Brand-Sentiment-App: MooTweet🐮
 
 "Mootweet"-- which started as a web app for Music Information Retrieval(MIR) researchers, musicians, and engineers-- is a real-time streaming analytics dashboard using both data science music hacking!
 
