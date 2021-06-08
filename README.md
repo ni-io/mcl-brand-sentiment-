@@ -1,10 +1,12 @@
 ![alt text](https://github.com/nickitaliano/mcl-mh-brand-sentiment-analysis-app/blob/master/MooTweet.png?raw=true)
 
-# MooTweet:mh-mcl-brand-sentiment-app 🎹
+#mh-mcl-brand-sentiment-app:MooTweet 🎹
+"Mootweet"-- which started as a web app for Music Information Retrieval(MIR) researchers, musicians, and engineers-- is a real-time streaming analytics dashboard using both data science music hacking!
 
-"Mootweet"-- a Twitter analytical web dashboard app for Music Information Retrieval(MIR) researchers, musicians or engineers-- was developed to see if realtime streaming analytics could make a difference via data science music hacking!
+The app features decision support using Python's Dash framework and Twitter's Search API. MooTweet can be tested and deployed both locally(Unix) and remotely(Heroku). 
 
-The main dashboard streams data via [Twitter's Search API](https://en.wikipedia.org/wiki/Dashboard_(business)) and features were written in Dash(Python Web App Framework). The app envoroments can be deployed locally(Unix) and remotly(Heroku), and users can monitor exploratory analyses and NLP(Natural Language Processing) insights!
+Users can then monitor exploratory features plus NLP(Natural Language Processing) insights!
+
 
 <br/>
 
