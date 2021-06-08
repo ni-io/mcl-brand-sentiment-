@@ -6,7 +6,7 @@
 
 "Mootweet"-- which started as a web app for Music Information Retrieval(MIR) researchers, musicians, and engineers-- is a real-time streaming analytics dashboard using both data science music hacking!
 
-The app features decision support, using Python's Dash and Flask framework, and Twitter's Search API. MooTweet can be tested and deployed both locally(Unix) and remotely(Heroku). 
+The app features both Python's Dash and Flask framework, and Twitter's Search API. It performs automated sentiment analyses for branding decision support. MooTweet can be tested and deployed both locally(Unix) and remotely(Heroku). 
 
 Users can then monitor exploratory features plus NLP(Natural Language Processing) insights!
 
@@ -171,4 +171,6 @@ A dashboard app is a set of easy-to-read pages that offer information to the use
 
 ### Ackknowledgements
 ---
-**[Chulong-Li](https://github.com/Chulong-Li/Real-time-Sentiment-Tracking-on-Twitter-for-Brand-Improvement-and-Trend-Recognition)**, a Data Scientist out of Ohio State, created an amazing real-time interactive web app; based on data pipelines using streaming Twitter data, automated sentiment analysis and MySQL/PostgreSQL database (Deployed on Heroku). **[As author on Medium](https://medium.com/@ChulongLi)** he outlined a complimentary project overview, plus tutorial, to get you "zero-to-dash-hero"👍
+**[Chulong-Li](https://github.com/Chulong-Li/Real-time-Sentiment-Tracking-on-Twitter-for-Brand-Improvement-and-Trend-Recognition)**, a Ohio State Data Scientist, created a fantastic real-time interactive dashboard app. The app analyzes Twitter data, running automated sentiment analyses for branding decision support.
+
+He developed the product using Python development frameworks(Deployed on Heroku). In addition, he drafted a complimentary project article **[featured on Medium](https://medium.com/@ChulongLi)** to get us started.🙌
