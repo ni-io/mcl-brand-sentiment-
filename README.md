@@ -2,9 +2,9 @@
 
 <br/>
 
-# Mh-Mcl-Brand-Sentiment-App
+# Mh-Mcl-Brand-Sentiment-App 🐮
 
-🐮"Mootweet"-- which started as a web app for Music Information Retrieval(MIR) researchers, musicians, and engineers-- is a real-time streaming analytics dashboard using both data science music hacking!
+"Mootweet"-- which started as a web app for Music Information Retrieval(MIR) researchers, musicians, and engineers-- is a real-time streaming analytics dashboard using both data science music hacking!
 
 The app features decision support, using Python's Dash and Flask framework, and Twitter's Search API. MooTweet can be tested and deployed both locally(Unix) and remotely(Heroku). 
 
