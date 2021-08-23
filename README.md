@@ -65,6 +65,9 @@ $ cd mcl-mh-brand-sentiment-analysis-app/
 $ virtualenv --no-site-packages env
 $ source env/bin/activate
 ```
+<br/>
+
+<br/>
 
 > Install modules - SQLite Database
 ```bash
