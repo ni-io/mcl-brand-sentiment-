@@ -11,8 +11,8 @@ Originally a modest Search API project, the streaming analytics app now performs
 
 <br/>
 
-# How to use it(Unix/Mac)
-## Download and install the Heroku CLI
+# How to use Heroku CLI
+## Download and Installation
 
 > If you haven't already, log in to your Heroku account and follow the prompts to create a new SSH public key.
 ```'bash 
