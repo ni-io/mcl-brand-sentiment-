@@ -59,7 +59,7 @@ $ cd mcl-mh-brand-sentiment-analysis-app/
 
 <br/>
 
-### Package Installation
+### Development Setup
 > Virtualenv modules installation (Unix based systems)
 ```bash
 $ virtualenv --no-site-packages env
