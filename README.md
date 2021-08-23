@@ -172,3 +172,20 @@ A dashboard app is a set of easy-to-read pages that offer information to the use
 **[Chulong-Li](https://github.com/Chulong-Li/Real-time-Sentiment-Tracking-on-Twitter-for-Brand-Improvement-and-Trend-Recognition)**, a Ohio State Data Scientist, created a fantastic real-time interactive dashboard app. The app analyzes Twitter data, running automated sentiment analyses for branding decision support.
 
 He developed the product using Python development frameworks(Deployed on Heroku). In addition, he drafted a complimentary project article **[featured on Medium](https://medium.com/@ChulongLi)** to get us started.🙌
+
+
+### Meta
+
+Nick Italiano – [@nickitalian0](https://twitter.com/nickitalian0) – nickitaliano@gmail.com
+
+Distributed under the XYZ license. See ``LICENSE`` for more information.
+
+[https://github.com/yourname/github-link](https://github.com/nickitaliano/)
+
+### Contributing
+
+1. Fork it (<https://github.com/yourname/yourproject/fork>)
+2. Create your feature branch (`git checkout -b feature/fooBar`)
+3. Commit your changes (`git commit -am 'Add some fooBar'`)
+4. Push to the branch (`git push origin feature/fooBar`)
+5. Create a new Pull Request
