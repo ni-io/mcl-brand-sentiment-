@@ -12,7 +12,7 @@ Originally a modest Search API project, the streaming analytics app now performs
 <br/>
 
 # How to use Heroku CLI
-## Download and Installation:OSX X Linux
+## Download and Installation(Unix/Linux)
 
 > If you haven't already, log in to your Heroku account and follow the prompts to create a new SSH public key.
 ```'bash 
