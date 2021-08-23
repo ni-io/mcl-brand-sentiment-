@@ -196,9 +196,9 @@ Distributed under the MIT license. See ``LICENSE`` for more information.
 
 
 <!-- Markdown link & img dfn's -->
+[![Build Status][travis-image]][travis-url]
 <!-- 
 [![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
 [![Downloads Stats][npm-downloads]][npm-url]
 
 
