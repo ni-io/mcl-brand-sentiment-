@@ -29,7 +29,7 @@ $ heroku git:remote -a mootweet
 
 <br/>
 
-## Deploy your application
+## Want to deploy your application?
 
 > Commit your code to the repository and deploy it to Heroku using Git.
 ```bash
