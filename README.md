@@ -178,7 +178,7 @@ He developed the product using Python development frameworks(Deployed on Heroku)
 ---
 Nick Italiano – [@nickitalian0](https://twitter.com/nickitalian0) – nickitaliano@gmail.com
 
-Distributed under the XYZ license. See ``LICENSE`` for more information.
+Distributed under the MIT license. See ``LICENSE`` for more information.
 
 [https://github.com/yourname/github-link](https://github.com/nickitaliano/)
 
