@@ -175,15 +175,16 @@ He developed the product using Python development frameworks(Deployed on Heroku)
 
 
 ### Meta
-
+---
 Nick Italiano – [@nickitalian0](https://twitter.com/nickitalian0) – nickitaliano@gmail.com
 
 Distributed under the XYZ license. See ``LICENSE`` for more information.
 
 [https://github.com/yourname/github-link](https://github.com/nickitaliano/)
 
-### Contributing
 
+### Contributing
+---
 1. Fork it (<https://github.com/yourname/yourproject/fork>)
 2. Create your feature branch (`git checkout -b feature/fooBar`)
 3. Commit your changes (`git commit -am 'Add some fooBar'`)
