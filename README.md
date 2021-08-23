@@ -4,11 +4,9 @@
 
 # MooTweet: Mh-Mcl-Brand-Sentiment-App 🐮
 
-"Mootweet"-- which started as a web app for Music Information Retrieval(MIR) researchers, musicians, and engineers-- is a real-time streaming analytics dashboard using both data science music hacking!
+MooTweet is a data product that was built for the Music Hackathon/Music Community Lab, a not-for-profit music organization. The real-time dashboard provides decision support—using Python, NLP methods and Flask framework—to quantify individual and brand engagement on Twitter. 
 
-The app features both Python's Dash and Flask framework and Twitter's Search API. It performs automated sentiment analyses for branding decision support. MooTweet can be tested and deployed both locally(Unix) and remotely(Heroku). 
-
-Users can then monitor exploratory features plus NLP(Natural Language Processing) insights!
+Originally a modest Search API project, the streaming analytics app now performs sentiment analyses and measures engagement metrics that satisfy the original client goal: use the Twitter Search API to identify the organization’s most brand worthy account. 
 
 
 <br/>
