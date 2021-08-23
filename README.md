@@ -1,3 +1,5 @@
+[![Build Status][travis-image]][travis-url]
+
 ![](https://github.com/nickitaliano/mcl-mh-brand-sentiment-analysis-app/blob/master/banner.gif)
 
 <br/>
