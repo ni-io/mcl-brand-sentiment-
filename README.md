@@ -188,6 +188,8 @@ Distributed under the MIT license. See ``LICENSE`` for more information.
 
 ### Contributing
 ---
+I'm grateful for all the help on this open-source. Please make a PR with the source so I can confirm corrections. Also, feel free to open an issue if you have any suggestions. Thanks!
+
 1. Fork it (<https://github.com/yourname/yourproject/fork>)
 2. Create your feature branch (`git checkout -b feature/fooBar`)
 3. Commit your changes (`git commit -am 'Add some fooBar'`)
