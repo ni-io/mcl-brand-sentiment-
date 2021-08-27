@@ -179,7 +179,7 @@ He developed the product using Python development frameworks(Deployed on Heroku)
 
 ### Meta
 ---
-Nick Italiano – [@nickitalian0](https://twitter.com/nickitalian0) – nickitaliano@gmail.com
+Nick Italiano – [@nickitalian0](https://twitter.com/nickitalian0) – nickitaliano.io@gmail.com
 
 Distributed under the MIT license. See ``LICENSE`` for more information.
 
